@@ -1,0 +1,39 @@
+<html>
+	<head>
+    	<title> CuCoupon </title>
+    	<meta charset="8-utf">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        
+        <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="sign.css">
+    </head>
+<body>
+
+<form action="file.php" method="POST" class="form-signin">
+  <img class="mb-4" src="bootstrap/site/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">Accedi</h1>
+  
+  <label for="inputEmail" class="sr-only">Username</label>
+  <input name="username" type="user" id="inputUser" class="form-control" placeholder="Username" required autofocus>
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input name = "password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+         <div class="d-block my-3">
+          <div class="custom-control custom-radio">
+            <input value ="C" id="cliente" name="type" type="radio" class="custom-control-input" checked required/>
+            <label class="custom-control-label" for="cliente">Cliente</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input value="N" id="negozio" name="type" type="radio" class="custom-control-input" required/>
+            <label class="custom-control-label" for="negozio">Negozio</label>
+          </div>
+        </div>
+ <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Ricordami
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Accedi</button>
+  <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+</form>
