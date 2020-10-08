@@ -1,0 +1,24 @@
+
+              if ( $r->num_rows > 0 ) {
+
+                  while ( $row = $r->fetch_assoc() ) {
+
+                    echo '<div class="col-md-4">
+                    <div class="text-white bg-dark mb-3">
+                    <placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail"/>
+                    <div class="card-header">'.$row["P_NOME"].'</div>
+                    <img height="300" width="150" class="card-img-top" src="data:image/jpeg;base64,'.base64_encode( $row["FOTO"] ).'"/>
+                    <div class="card-body">
+                      <p class="card-text">'.$row["P_DESCR"].'<br>
+                      <del>'.$row["ORIG"].'</del>  '.$row["DISC"].'</p>
+                       <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Acquista</button>
+                        </div>
+                        <small class="text-muted">'.$row["SCONTO"].'%</small>
+                      </div>
+                    </div>
+                  </div>
+                  </div>' ;
+                  }
+              }
